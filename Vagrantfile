@@ -32,4 +32,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # argument is a set of non-required options.
   config.vm.synced_folder "./app", "/var/www/django-app"
 
+  # Install required software, dependencies and configurations on the
+  # virtual machine using a provisioner.
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "provision/playbook.yml"
+  end
 end
