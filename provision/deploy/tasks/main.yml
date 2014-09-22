@@ -1,3 +1,8 @@
+- name: Install Django requirements
+  copy: src=requirements.txt dest={{ virtualenv_path }} force=yes
+  notify:
+      - Install requirements
+
 - name: Setup Virtualenv
   pip: virtualenv={{ virtualenv_path }} requirements={{ virtualenv_path }}/requirements.txt
 

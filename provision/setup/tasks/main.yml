@@ -11,6 +11,7 @@
       - python-dev
       - python-setuptools
       - python-virtualenv
+      - git
 
 - name: Allow password authentication for local socket users
   sudo: yes
