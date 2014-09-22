@@ -1,4 +1,0 @@
-Django==1.7
-psycopg2==2.5.4
-PIL==1.1.7
-simplejson==2.6.1
